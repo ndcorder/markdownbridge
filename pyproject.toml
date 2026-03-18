@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "markdownbridge"
+version = "0.1.0"
+description = "Convert Markdown to Confluence, Jira, Slack, and Teams formats"
+requires-python = ">=3.10"
+dependencies = [
+    "markdown-it-py",
+    "click",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[project.scripts]
+markdownbridge = "markdownbridge.cli:main"
